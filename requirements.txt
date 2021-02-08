@@ -1,0 +1,8 @@
+ cv2
+ platform
+ json
+ pyautogui
+ colorama 
+ re
+ requests
+ numpy
