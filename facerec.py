@@ -10,10 +10,10 @@ from colorama import Fore
 import re
 import requests
 size = str(pyautogui.size())
-faceCascade = cv2.CascadeClassifier(r'cascade/frontalface.xml')
+faceCascade = cv2.CascadeClassifier(r'cascadexml/frontalface.xml')
 # Eye recognition classifier
-eyeCascade = cv2.CascadeClassifier(r'cascade/eye.xml')
-mouthCascade = cv2.CascadeClassifier('cascade/mouth.xml')
+eyeCascade = cv2.CascadeClassifier(r'cascadexml/eye.xml')
+mouthCascade = cv2.CascadeClassifier('cascadexml/mouth.xml')
 def update():
     url = 'https://api.github.com/repos/FonderElite/facerecognition/commits'
     r = requests.get(url)
