@@ -98,8 +98,12 @@ o-''))_____//
 "--__/ * * * ) Woof Woof! 
 c_c__/-c____/ Dont be a Script Kiddie
         ''')
+        sys.exit()
     elif quitc == "n":
      print(wi +  rd + "Cancelled.")
+    else:
+     print(wi +  rd + "Exitting..")
+     sys.exit()
 osys = platform.system()
 wi="\033[1;37m" #>>White#
 rd="\033[1;31m" #>Red   #
@@ -110,12 +114,17 @@ yl="\033[1;33m" #>Yellow#
 try:
  import cv2
  import numpy
+ import pyautogui
+ import requests
+ 
 
 except ImportError:
  print(rd + wi + "You Have Some Missing modules!")
  print(wi + 'Installing Missing Modules')
  os.system('pip3 install opencv-python')
  os.system('pip3 install numpy')
+ os.system('pip3 install pyautogui')
+ os.system('pip3 install requests')
 
 help = wi + yl + '''
 =============================================
@@ -188,3 +197,4 @@ while True:
  ║ ├┬┘└┬┘  ├─┤│ ┬├─┤││││ 
  ╩ ┴└─ ┴   ┴ ┴└─┘┴ ┴┴┘└┘o 
      ''')
+#Dont be a script kiddie dummy
