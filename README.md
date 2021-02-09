@@ -24,3 +24,22 @@ ______________________
 # What is facial-recognition?
 > A facial recognition system is a technology capable of matching a human face from a digital image or a video frame against a database of faces, typically employed to authenticate users through ID verification services, works by pinpointing and measuring facial features from a given image. 
 
+# Installation
+```git clone https://github.com/FonderElite/facerecognition
+   pip3 install requirements.txt
+```
+
+# How to run?
+```
+ python3 facerec.py
+```
+
+# Things to consider
+- [x] All Prerequisites/dependencies must be installed
+- [x] Run in an IDE or in a Terminal
+- [x] If you want to use this repository for your projects you may do so but give credits to me.
+
+# Socials
+* Github: https://github.com/fonderelite
+* Twitter: https://twitter.com/elitefonder
+* Gmail: s1170294@usls.edu.ph
