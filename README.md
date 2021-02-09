@@ -1,2 +1,18 @@
-# facerecognition
-Facial Recognition 
+# Face-Recognition
+```
+      _______
+     _/       \_
+    / |       | |;
+   /  |__   __|  |[
+  |__/((o| |o))\__| Face Recognition 
+  |      | |      | Using Python
+  |\     |_|     /| 
+  | \   ______  / | By FonderElite
+   \| /  ___  \ |/
+    \ | / _ \ | /
+     \_________/
+      _|_____|_
+ ____|_________|____
+/                   \  
+______________________
+```
