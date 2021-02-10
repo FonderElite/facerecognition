@@ -45,4 +45,4 @@ ______________________
 * Gmail: s1170294@usls.edu.ph
 
 # Updates
-- [x] ** Added Car/Vehicle Detection**
+- [x] Added Car/Vehicle Detection
