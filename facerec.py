@@ -9,11 +9,14 @@ import pyautogui
 from colorama import Fore
 import re
 import requests
+
 size = str(pyautogui.size())
 faceCascade = cv2.CascadeClassifier(r'cascadexml/frontalface.xml')
 # Eye recognition classifier
 eyeCascade = cv2.CascadeClassifier(r'cascadexml/eye.xml')
 mouthCascade = cv2.CascadeClassifier('cascadexml/mouth.xml')
+
+
 def update():
     url = 'https://api.github.com/repos/FonderElite/facerecognition/commits'
     r = requests.get(url)
@@ -26,6 +29,7 @@ def update():
         print(wi + gr + "There is an update!")
         print(wi + "Kindly check https://github.com/fonderelite/facerecognition")
 
+
 def camera():
     print(wi + 'Checking Screen Size...')
     time.sleep(2)
@@ -34,14 +38,17 @@ def camera():
     print(wi + rd + "Press ESC key to exit")
     cap = cv2.VideoCapture(0)
     while True:
-      ret_val, img = cap.read()
-      mirror = True
-      if mirror:
-         img = cv2.flip(img, 1)
-         cv2.imshow('Video Test', img)
-      if cv2.waitKey(1) == 27:
-       sys.exit()
+        ret_val, img = cap.read()
+        mirror = True
+        if mirror:
+            img = cv2.flip(img, 1)
+            cv2.imshow('Video Test', img)
+        if cv2.waitKey(1) == 27:
+            sys.exit()
+
+
 cv2.destroyAllWindows()
+
 
 def facerec():
     cap = cv2.VideoCapture(0)
@@ -72,26 +79,25 @@ def facerec():
 
         # Draw rectangle
         for (x, y, w, h) in faces:
-           rect1 =  cv2.rectangle(img, (x, y), (x + w, y + h), (200, 100, 100), 2)
-           cv2.putText(img, "Human", (x, y),  cv2.FONT_HERSHEY_SIMPLEX, 0.75, (0, 255, 0), 2)
+            rect1 = cv2.rectangle(img, (x, y), (x + w, y + h), (200, 100, 100), 2)
+            cv2.putText(img, "Human", (x, y), cv2.FONT_HERSHEY_SIMPLEX, 0.75, (0, 255, 0), 2)
         for (ex, ey, ew, eh) in result:
-          rect2 =   cv2.rectangle(img, (ex, ey), (ex + ew, ey + eh), (255, 200, 100), 2)
-          cv2.putText(img, "Eye", (ex, ey), cv2.FONT_HERSHEY_SIMPLEX, 0.75, (0, 255, 0), 2)
+            rect2 = cv2.rectangle(img, (ex, ey), (ex + ew, ey + eh), (255, 200, 100), 2)
+            cv2.putText(img, "Eye", (ex, ey), cv2.FONT_HERSHEY_SIMPLEX, 0.75, (0, 255, 0), 2)
         cv2.imshow('video', img)
         k = cv2.waitKey(1)
         if k == 27:  # press 'ESC' to quit
             break
 
-
-
     cap.release()
     cv2.destroyAllWindows()
-    
+
+
 def car():
     # capture frames from a video
-    cap = cv2.VideoCapture('C:/Users/Lenovo/Downloads/1mincar.mp4')
+    cap = cv2.VideoCapture('1mincar.mp4')
     # Trained XML classifiers describes some features of some object we want to detect
-    car_cascade = cv2.CascadeClassifier('C:/Users/Lenovo/Documents/cars3.xml')
+    car_cascade = cv2.CascadeClassifier('cascadexml/cars3.xml')
 
     # loop runs if capturing has been initialized.
     while True:
@@ -104,7 +110,7 @@ def car():
         # To draw a rectangle in each cars
         for (x, y, w, h) in cars:
             cv2.rectangle(frames, (x, y), (x + w, y + h), (0, 0, 255), 2)
-            cv2.putText(frames,"Car", (x,y), cv2.FONT_HERSHEY_SIMPLEX,0.75, (0,255, 0), 2)
+            cv2.putText(frames, "Car", (x, y), cv2.FONT_HERSHEY_SIMPLEX, 0.75, (0, 255, 0), 2)
             # Display frames in a window
             cv2.imshow('Car Detection', frames)
         # Wait for Enter key to stop
@@ -115,7 +121,7 @@ def car():
 
 
 def quit():
-    quitc = input(wi +  'Are you sure you want to quit?(y/n): ')
+    quitc = input(wi + 'Are you sure you want to quit?(y/n): ')
     if quitc == "y":
         print('Quitting...')
         time.sleep(1)
@@ -127,31 +133,32 @@ c_c__/-c____/ Dont be a Script Kiddie
         ''')
         sys.exit()
     elif quitc == "n":
-     print(wi +  rd + "Cancelled.")
+        print(wi + rd + "Cancelled.")
     else:
-     print(wi +  rd + "Exitting..")
-     sys.exit()
-osys = platform.system()
-wi="\033[1;37m" #>>White#
-rd="\033[1;31m" #>Red   #
-gr="\033[1;32m" #>Green #
-yl="\033[1;33m" #>Yellow#
+        print(wi + rd + "Exitting..")
+        sys.exit()
 
+
+osys = platform.system()
+wi = "\033[1;37m"  # >>White#
+rd = "\033[1;31m"  # >Red   #
+gr = "\033[1;32m"  # >Green #
+yl = "\033[1;33m"  # >Yellow#
 
 try:
- import cv2
- import numpy
- import pyautogui
- import requests
- 
+    import cv2
+    import numpy
+    import pyautogui
+    import requests
+
 
 except ImportError:
- print(rd + wi + "You Have Some Missing modules!")
- print(wi + 'Installing Missing Modules')
- os.system('pip3 install opencv-python')
- os.system('pip3 install numpy')
- os.system('pip3 install pyautogui')
- os.system('pip3 install requests')
+    print(rd + wi + "You Have Some Missing modules!")
+    print(wi + 'Installing Missing Modules')
+    os.system('pip3 install opencv-python')
+    os.system('pip3 install numpy')
+    os.system('pip3 install pyautogui')
+    os.system('pip3 install requests')
 
 help = wi + yl + '''
 =============================================
@@ -166,17 +173,17 @@ help = wi + yl + '''
 +|Ex. ./facerec -fc -s (start)             |+
 +|=========================================|+
 '''
-faceCascade = cv2.CascadeClassifier(r'C:/Users/Lenovo/Documents/frontalface.xml')
+faceCascade = cv2.CascadeClassifier(r'cascadexml/frontalface.xml')
 # Eye recognition classifier
-eyeCascade = cv2.CascadeClassifier(r'C:/Users/Lenovo/Documents/eye.xml')
-mouthCascade = cv2.CascadeClassifier('C:/Users/Lenovo/Documents/mouth.xml')
+eyeCascade = cv2.CascadeClassifier(r'cascadexml/eye.xml')
+mouthCascade = cv2.CascadeClassifier(r'cascadexml/mouth.xml')
 sys.stdout.write(wi + '\rLoading..')
 time.sleep(1)
 sys.stdout.write(wi + '\rLoading...')
 time.sleep(1)
-sys.stdout.write(wi +'\rLoading....')
+sys.stdout.write(wi + '\rLoading....')
 time.sleep(1)
-sys.stdout.write(wi +'\rLoading......')
+sys.stdout.write(wi + '\rLoading......')
 time.sleep(1)
 sys.stdout.write('\rLoading..........')
 time.sleep(1)
@@ -200,28 +207,30 @@ ______________________
 ''')
 
 print(wi + yl + 'Created By FonderElite || Droid')
-print(wi + yl  + 'Visit My GitHub Page: https://github.com/FonderElite')
-print(wi + yl  + 'Visit my shop: https://legion.rf.gd')
+print(wi + yl + 'Visit My GitHub Page: https://github.com/FonderElite')
+print(wi + yl + 'Visit my shop: https://legion.rf.gd')
 print(wi + yl + '=======================================================')
 print(wi + './facerec -h for help')
 while True:
- cmd =  input(wi + gr + osys + "-User: ")
- if cmd == "./facerec -h":
-   print(help)
- elif cmd == "./facerec":
-   print(help)
- elif cmd == "./facerec -u":
-   update()
- elif cmd == "./facerec -c":
-    camera()
- elif cmd == "./facerec -fc -s":
-    facerec()
- elif cmd == "./facerec -q":
-    quit()
- else:
-     print(wi + rd + '''
+    cmd = input(wi + gr + osys + "-User: ")
+    if cmd == "./facerec -h":
+        print(help)
+    elif cmd == "./facerec":
+        print(help)
+    elif cmd == "./facerec -u":
+        update()
+    elif cmd == "./facerec -c":
+        camera()
+    elif cmd == "./facerec -fc -s":
+        facerec()
+    elif cmd == "./facerec -q":
+        quit()
+    elif cmd == "./facerec -vh":
+        car()
+    else:
+        print(wi + rd + '''
 ╦╗┬─┐┬ ┬  ┌─┐┌─┐┌─┐┬┌┐┌ 
  ║ ├┬┘└┬┘  ├─┤│ ┬├─┤││││ 
  ╩ ┴└─ ┴   ┴ ┴└─┘┴ ┴┴┘└┘o 
      ''')
-#Dont be a script kiddie dummy
+# Dont be a script kiddie dummy
