@@ -43,3 +43,6 @@ ______________________
 * Github: https://github.com/fonderelite
 * Twitter: https://twitter.com/elitefonder
 * Gmail: s1170294@usls.edu.ph
+
+# Updates
+- [x] ** Added Car/Vehicle Detection**
