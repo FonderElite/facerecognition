@@ -37,7 +37,7 @@ ______________________
 > You might want to change the **faceCascade,mouthCascade and the eyeCascade**
 to the directory which the cascade files are placed.
 Consider also changing the **car_Cascade's** xml file location for the car recognition to work.
-### Example: faceCascade = cv2.CascadeClassifier('file_location')
+### Example: ```faceCascade = cv2.CascadeClassifier('file_location')```
 
 
 # Things to consider
