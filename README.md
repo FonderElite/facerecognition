@@ -33,6 +33,10 @@ ______________________
 ```
  python3 facerec.py
 ```
+# Possible Bugs
+> You might want to change the **faceCascade,mouthCascade and the eyeCascade**
+to the directory which the cascade files are placed.
+Consider also changing the **car_Cascade's** xml file location for the car recognition to work.
 
 # Things to consider
 - [x] All Prerequisites/dependencies must be installed
