@@ -1,5 +1,4 @@
  opencv-python
- json
  pyautogui
  colorama 
  re
