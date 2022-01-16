@@ -1,15 +1,6 @@
 import numpy as np
-import os
-import sys
-import cv2
-import platform
-import time
-import json
-import pyautogui
 from colorama import Fore
-import re
-import requests
-
+import os,sys,cv2,platform,time,json,pyautogui,re,requests
 size = str(pyautogui.size())
 faceCascade = cv2.CascadeClassifier(r'cascadexml/frontalface.xml')
 # Eye recognition classifier
