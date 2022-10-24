@@ -84,7 +84,7 @@ def facerec():
     cv2.destroyAllWindows()
 
 
-def car():
+def carDetection():
     # capture frames from a video
     cap = cv2.VideoCapture('1mincar.mp4')
     # Trained XML classifiers describes some features of some object we want to detect
